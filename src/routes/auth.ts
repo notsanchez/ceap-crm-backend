@@ -6,10 +6,10 @@ const router = Router();
 router.post("/auth", async (req, res) => {
   const { email, password } = req.body;
 
-  const loginUseCase = new LoginUseCase();
+  const _loginUseCase = new LoginUseCase();
 
   try {
-    const result = await loginUseCase.execute({ email, password });
+    const result = await _loginUseCase.execute({ email, password });
 
     if (!result) {
       res.status(500).send({ error: "User not found" });

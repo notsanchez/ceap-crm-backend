@@ -8,10 +8,10 @@ const router = Router();
 router.post("/contacts", async (req, res) => {
   const { full_name, email, company_name } = req.body;
 
-  const upserContactUseCase = new UpsertContactUseCase();
+  const _upserContactUseCase = new UpsertContactUseCase();
 
   try {
-    const result = await upserContactUseCase.execute({
+    const result = await _upserContactUseCase.execute({
       full_name,
       email,
       company_name,
@@ -24,10 +24,10 @@ router.post("/contacts", async (req, res) => {
 });
 
 router.get("/contacts", async (req, res) => {
-  const getContactsUseCase = new GetContactsUseCase();
+  const _getContactsUseCase = new GetContactsUseCase();
 
   try {
-    const result = await getContactsUseCase.execute();
+    const result = await _getContactsUseCase.execute();
 
     res.status(200).send(result);
   } catch (error) {
@@ -38,10 +38,10 @@ router.get("/contacts", async (req, res) => {
 router.get("/contacts/:id", async (req, res) => {
   const { id } = req.params;
 
-  const getContactsUseCase = new GetContactInfoByIdUseCase();
+  const _getContactsUseCase = new GetContactInfoByIdUseCase();
 
   try {
-    const result = await getContactsUseCase.execute({ contact_id: id });
+    const result = await _getContactsUseCase.execute({ contact_id: id });
 
     res.status(200).send(result);
   } catch (error) {
