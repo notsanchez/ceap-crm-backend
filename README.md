@@ -8,7 +8,7 @@
 
 | Campo       | Tipo    | Descrição                      |
 | ----------- | ------- | ------------------------------ |
-| `id`        | int     | Identificador único do usuário |
+| `id`        | varchar | Identificador único do usuário |
 | `email`     | varchar | Endereço de e-mail do usuário  |
 | `password`  | varchar | Senha do usuário               |
 | `full_name` | varchar | Nome completo do usuário       |
@@ -17,7 +17,7 @@
 
 | Campo               | Tipo     | Descrição                          |
 | ------------------- | -------- | ---------------------------------- |
-| `id`                | int      | Identificador único do contato     |
+| `id`                | varchar  | Identificador único do contato     |
 | `full_name`         | varchar  | Nome completo do contato           |
 | `email`             | varchar  | Endereço de e-mail do contato      |
 | `company_name`      | varchar  | Nome da empresa do contato         |
@@ -30,12 +30,12 @@
 
 | Campo        | Tipo     | Descrição                           |
 | ------------ | -------- | ----------------------------------- |
-| `id`         | int      | Identificador único da mensagem     |
+| `id`         | varchar  | Identificador único da mensagem     |
 | `contact_id` | int      | Identificador do contato            |
 | `message`    | text     | Conteúdo da mensagem                |
 | `sended`     | boolean  | Indica se a mensagem foi enviada    |
 | `approved`   | boolean  | Indica se a mensagem foi aprovada   |
-| `sended_by`  | int      | Identificador do usuário que enviou |
+| `sended_by`  | varchar  | Identificador do usuário que enviou |
 | `sended_at`  | datetime | Data de envio da mensagem           |
 | `created_at` | datetime | Data de criação da mensagem         |
 
