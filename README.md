@@ -41,12 +41,14 @@
 
 ## Endpoints
 
+### `Authorization/Login`
+
 ### [LoginUseCase]
 
 - **POST** `/auth`
   - Realiza o login do usuário.
 
-### `contacts`
+### `Contatos`
 
 ### [UpsertContactUseCase]
 
@@ -63,7 +65,7 @@
 - **GET** `/contacts/:id`
   - Obtém informações detalhadas sobre um contato específico.
 
-### `messages`
+### `Mensagens`
 
 ### [GetMessagesInQueueToApproveUseCase]
 
