@@ -76,7 +76,7 @@
 - **GET** `/messages`
   - Obtém a lista de mensagens enviadas.
 
-### [GetMessagesHistoryByContactIdUseCase]
+### [GetMessageHistoryByContactIdUseCase]
 
 - **GET** `/messages/history/:contact_id`
   - Obtém o histórico de mensagens de um contato específico.
