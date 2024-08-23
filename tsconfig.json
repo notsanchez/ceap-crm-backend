@@ -9,8 +9,5 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
-  "scripts": {
-    "start": "ts-node src/index.ts"
-  },
   "include": ["src/**/*"]
 }
