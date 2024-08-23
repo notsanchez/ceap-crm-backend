@@ -126,7 +126,7 @@ WHERE id = :contact_id;
 
 ### GenerateMessagesForSixthDay
 
-**Execução:** Todo dia ao 12:00
+**Execução:** Todo dia as 13:00
 
 ```sql
 SELECT * FROM contacts 
@@ -144,7 +144,7 @@ WHERE id = :contact_id;
 
 ### GenerateMessagesForTwelfthDay
 
-**Execução:** Todo dia ao 12:00
+**Execução:** Todo dia as 14:00
 
 ```sql
 SELECT * FROM contacts 
