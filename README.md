@@ -1,4 +1,4 @@
-# CEAP CRM & IA
+# CEAP CRM [Back-end]
 
 **CEAP CRM** é um sistema de CRM projetado para gerenciar contatos, mensagens e usuários. Ele inclui funcionalidades para enviar mensagens automáticas a contatos em diferentes estágios e aprovar mensagens antes do envio.
 
