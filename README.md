@@ -46,6 +46,8 @@
 - **POST** `/auth`
   - Realiza o login do usuário.
 
+### `contacts`
+
 ### [UpsertContactUseCase]
 
 - **POST** `/contacts`
@@ -60,6 +62,8 @@
 
 - **GET** `/contacts/:id`
   - Obtém informações detalhadas sobre um contato específico.
+
+### `messages`
 
 ### [GetMessagesInQueueToApproveUseCase]
 
