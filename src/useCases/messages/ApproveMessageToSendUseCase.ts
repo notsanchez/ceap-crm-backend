@@ -11,7 +11,7 @@ class ApproveMessageToSendUseCase {
 
     const messagesRepo = AppDataSource.getRepository(Message);
 
-    await messagesRepo.update({ id: Number(message_id) }, { approved: true });
+    await messagesRepo.update({ id: message_id }, { approved: true });
 
     return { success: true };
   }

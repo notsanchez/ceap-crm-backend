@@ -5,7 +5,7 @@ interface IGetContactsInfoByIdRequest {
   contact_id: string;
 }
 
-class GetContactUseCase {
+class GetContactInfoByIdUseCase {
   async execute(payload: IGetContactsInfoByIdRequest) {
     const { contact_id } = payload;
 
@@ -13,7 +13,7 @@ class GetContactUseCase {
 
     const contacts = contactRepo.findOne({
       where: {
-        id: Number(contact_id),
+        id: contact_id,
       },
     });
 
@@ -21,4 +21,4 @@ class GetContactUseCase {
   }
 }
 
-export default GetContactUseCase;
+export default GetContactInfoByIdUseCase;

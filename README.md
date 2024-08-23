@@ -90,13 +90,14 @@
 ```sql
 SELECT * FROM contacts
 WHERE last_message_date IS NULL
-  AND next_message_date IS NULL
+AND next_message_date IS NULL
 LIMIT 100;
 
 UPDATE contacts
-SET last_message_date = NOW(),
-    next_message_date = NOW() + INTERVAL '2 days',
-    message_stage = 1
+SET 
+last_message_date = NOW(),
+next_message_date = NOW() + INTERVAL '2 days',
+message_stage = 1
 WHERE id = :contact_id;
 ```
 
@@ -106,13 +107,14 @@ WHERE id = :contact_id;
 
 ```sql
 SELECT * FROM contacts
-		WHERE next_message_date = CURRENT_DATE
+WHERE next_message_date = CURRENT_DATE
 AND message_stage = 1;
 
 UPDATE contacts
-SET last_message_date = NOW(),
-	next_message_date = NOW() + INTERVAL '6 days',
-	message_stage = 2
+SET 
+last_message_date = NOW(),
+next_message_date = NOW() + INTERVAL '4 days',
+message_stage = 2
 WHERE id = :contact_id;
 ```
 
@@ -122,14 +124,15 @@ WHERE id = :contact_id;
 
 ```sql
 SELECT * FROM contacts 
-	WHERE next_message_date = CURRENT_DATE 
+WHERE next_message_date = CURRENT_DATE 
 AND message_stage = 2;
 
 
 UPDATE contacts 
-SET last_message_date = NOW(), 
-	next_message_date = NOW() + INTERVAL '12 days', 
-	message_stage = 3
+SET 
+last_message_date = NOW(), 
+next_message_date = NOW() + INTERVAL '6 days', 
+message_stage = 3
 WHERE id = :contact_id;
 ```
 
@@ -139,13 +142,14 @@ WHERE id = :contact_id;
 
 ```sql
 SELECT * FROM contacts 
-	WHERE next_message_date = CURRENT_DATE 
+WHERE next_message_date = CURRENT_DATE 
 AND message_stage = 3;
 
 UPDATE contacts 
-	SET last_message_date = NOW(), 
-	next_message_date = NULL, 
-	message_stage = 4 
+SET 
+last_message_date = NOW(), 
+next_message_date = NULL, 
+message_stage = 4 
 WHERE id = :contact_id;
 
 ```

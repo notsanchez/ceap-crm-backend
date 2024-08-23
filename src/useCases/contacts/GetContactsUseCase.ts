@@ -1,7 +1,7 @@
 import { AppDataSource } from "../../data-source";
 import { Contact } from "../../entities/Contact";
 
-class GetContactUseCase {
+class GetContactsUseCase {
   async execute() {
     const contactRepo = AppDataSource.getRepository(Contact);
 
@@ -11,4 +11,4 @@ class GetContactUseCase {
   }
 }
 
-export default GetContactUseCase;
+export default GetContactsUseCase;
